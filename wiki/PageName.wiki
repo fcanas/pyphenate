@@ -1,0 +1,24 @@
+#summary About pyphenate
+
+= Introduction =
+
+ major roadblock in bringing well-set type to the web in an inability to control line length. Making text full-justified leaves unsightly gaps, and left justified text, while significantly more legible, doesn’t carry the elegance that is more easily achievable in print media. Setting aside the inherent spatial flexibility of the web as medium, a major issue preventing us from making text look as good as it can is the lack of automatic hyphenation of words across lines.
+
+The W3C has specified the “soft hyphen” as a character:
+
+"Those browsers that interpret soft hyphens must observe the following semantics: If a line is broken at a soft hyphen, a hyphen character must be displayed at the end of the first line. If a line is not broken at a soft hyphen, the user agent must not display a hyphen character. For operations such as searching and sorting, the soft hyphen should always be ignored."
+
+py phenate is a small step in the direction of enabling well-set text on the web by inserting soft hyphens in appropriate places throughout text. It is built on work that has come before to be an extremely simple module you can use to make your pages automatically hyphenate words across line breaks. At its root is Frank Liang’s hyphenation algorithm, the same algorithm used in TeX. That algorithm has been implemented in Python by Ned Batchelder. All I have done with py phenate is wrap an HTML Parser around it that reads in HTML, and inserts soft hyphens into words inside of `p` blocks. 
+
+
+= Usage =
+{{{
+import pyphenate
+...
+# Create an instance of the Pyphenate class
+pyph = pyphenate.Pyphenate()
+
+# content is an HTML string. to-be hyphenated text is inside p blocks
+# hyphenatedContent is the same as content, but will be hyphenated by browsers.
+hyphenatedContent = pyph.hyphenate(content)
+}}}
