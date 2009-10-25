@@ -2,7 +2,7 @@
 
 = Introduction =
 
- major roadblock in bringing well-set type to the web in an inability to control line length. Making text full-justified leaves unsightly gaps, and left justified text, while significantly more legible, doesn’t carry the elegance that is more easily achievable in print media. Setting aside the inherent spatial flexibility of the web as medium, a major issue preventing us from making text look as good as it can is the lack of automatic hyphenation of words across lines.
+A major roadblock in bringing well-set type to the web in an inability to control line length. Making text full-justified leaves unsightly gaps, and left justified text, while significantly more legible, doesn’t carry the elegance that is more easily achievable in print media. Setting aside the inherent spatial flexibility of the web as medium, a major issue preventing us from making text look as good as it can is the lack of automatic hyphenation of words across lines.
 
 The W3C has specified the “soft hyphen” as a character:
 
