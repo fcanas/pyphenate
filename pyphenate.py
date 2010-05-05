@@ -65,7 +65,9 @@ class Pyphenate(HTMLParser):
 
   def hyphenate(self, markup):
     self.feed(markup)
-    return ''.join(self.stack)
+    restults = ''.join(self.stack)
+    self.stack = []
+    return results
 
 # __version__ = '1.0.20070709'
 
